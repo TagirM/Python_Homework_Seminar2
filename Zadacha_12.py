@@ -11,5 +11,8 @@ def listN(n):
         element = element*(i+2)
     return b
 
-n = int(input('Введите число N: '))
+n = input('Введите число N: ')
+while not n.isdigit():
+    n = input('Введите число N: ')
+n = int(n)
 print(f'Набор произведений чисел от 1 до N {listN(n)}')
